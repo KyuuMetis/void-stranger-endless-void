@@ -12,3 +12,10 @@ else if (global.stranger == 6) {
 	golden_up = spr_ev_ninnie
 	golden_down = spr_ev_ninnie
 }
+if (global.custom_stranger == 1) {
+    var strange = ev_custom_init()
+	golden_right = strange[9]
+	golden_left = strange[10]
+	golden_up = strange[11]
+	golden_down = strange[8]
+}

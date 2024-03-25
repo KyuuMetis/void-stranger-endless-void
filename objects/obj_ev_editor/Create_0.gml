@@ -432,14 +432,17 @@ object_empty.iostruct = {
 sweat_sprite = asset_get_index("spr_sweat")
 object_player = new editor_object(asset_get_index("spr_player_down"), player_id, player_obj, "Instances", flag_unremovable|flag_only_one)
 object_player.draw_function = function(tile_state, i, j, preview, lvl) {
-
-	var spr = ev_get_stranger_down_sprite(global.stranger)
+    //drawing custom stranger here kills the game, for some reason
+	var spr = ev_get_stranger_down_sprite(global.stranger)	
+	//var strange = ev_custom_init()
 	if (preview && lvl.tiles[i][j].tile == tile_pit) {
-		draw_sprite(spr, ev_strobe_integer(2), j * 16 + 8 + dsin(global.editor_time * 24), i * 16 + 8)		
+		/*if global.custom_stranger == true draw_sprite(strange[0], ev_strobe_integer(2), j * 16 + 8 + dsin(global.editor_time * 24), i * 16 + 8)
+		else*/ draw_sprite(spr, ev_strobe_integer(2), j * 16 + 8 + dsin(global.editor_time * 24), i * 16 + 8)		
 		draw_sprite(sweat_sprite, global.editor_time / 5, j * 16 + 16, i * 16)
 		return;
 	}
-	draw_sprite(spr, ev_strobe_integer(2), j * 16 + 8, i * 16 + 8)	
+	/*if global.custom_stranger == true draw_sprite(strange[0], ev_strobe_integer(2), j * 16 + 8, i * 16 + 8)	
+	else*/ draw_sprite(spr, ev_strobe_integer(2), j * 16 + 8, i * 16 + 8)		
 }
 
 

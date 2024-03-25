@@ -51,6 +51,9 @@ add_child(author_brand)
 change_character = instance_create_layer(112 - 30, 72 + 10, "Instances", asset_get_index("obj_ev_change_character"));
 add_child(change_character)
 
+change_custom = instance_create_layer(112 - 50, 72 + 10, "Instances", asset_get_index("obj_ev_custom_character"));
+add_child(change_custom)
+
 author_textbox = instance_create_layer(112, 72 - 20, "Instances", asset_get_index("obj_ev_textbox"), 
 {
 	empty_text : "Username",

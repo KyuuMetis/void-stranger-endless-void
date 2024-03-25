@@ -14,5 +14,5 @@ function ev_get_stranger_down_sprite(stranger){
 		case 5: return lily
 		case 6: return ninnie
 		default: return gray
-	}	
+	}
 }
